@@ -5,6 +5,7 @@
             <th class="td-center">Default</th>
             <th class="td-center">Delete</th>
         </tr>
+        {% with m.kazoo.kz_bt_customer as bt_customer %}
         {% for card in bt_customer[1]["credit_cards"] %}
         <tr id="card_line_{{ card["id"] }}">
             <td class="td-center">
@@ -42,3 +43,4 @@
             </td>
         </tr>
         {% endfor %}
+        {% endwith %}
