@@ -38,19 +38,22 @@
                                            <br /><br /> Please refer to our <a href='https://onnet.info/termscons'>Terms & Conditions</a>
                                            regarding cancellation and refund policy.<br /><br />"
                         action={postback postback="kazoo_transaction" delegate="mod_kazoo" qarg="kazoo_transaction"}
-                        action={mask target="make_payment_line_id" message=_"Processing ..."}
                     }
                  %}
             </td>
         </tr>
     </tbody>
 </table>
+
 <span id="make_payment_manage_cards_tpl">
     {% include "_make_payment_manage_cards.tpl" %}
 </span>
+
 <span id="make_payment_topup_settings_tpl">
 {% include "_make_payment_topup_settings.tpl" %}
 </span>
+
+{% include "_braintree_transactions_list.tpl" %}
 
 {% endwith %}
 
