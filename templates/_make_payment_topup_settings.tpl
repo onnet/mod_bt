@@ -14,7 +14,7 @@
                   <i id="arrow_down_{{ #topup }}" style="padding-right: 0.5em; display: none;" class="fa fa-arrow-circle-down"></i>
                 </span>
                 <span style="color: FF9002;">
-                  Auto Recharge
+                  Auto Recharge <span class="onnet-07em">(once per day maximum)</span>
                 </span>
             </th>
             {% if topup %}
