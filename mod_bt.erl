@@ -5,3 +5,13 @@
 -mod_description("Braintree addon module for mod_kazoo").
 -mod_prio(15).
 
+-export([observe_online_payment_systems/2
+        ]).
+
+-include_lib("zotonic.hrl").
+
+observe_online_payment_systems(_, Context) ->
+    case modkazoo_auth:is_auth(Context) of
+        'false' -> 'undefined';
+        'true' -> <<"bt_widget_online_payment.tpl">>
+    end.
