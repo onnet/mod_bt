@@ -3,7 +3,7 @@
 
 -mod_title("Kazoo BT").
 -mod_description("Braintree addon module for mod_kazoo").
--mod_prio(15).
+-mod_prio(415).
 
 -export([observe_online_payment_systems/2
         ]).

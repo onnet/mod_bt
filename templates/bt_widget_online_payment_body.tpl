@@ -1,5 +1,6 @@
 <table class="table table-hover table-centered table-condensed">
     <thead>
+        <tr style="height: 10px; color: white!important; background-color: white!important;"><td colspan="3"></td></tr>
         <tr style="background-color:#F8F8F8">
             <th>
                 <a class="visible-lg" style="color: #FF9002; text-decoration: none; cursor: pointer;" 
