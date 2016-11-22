@@ -5,7 +5,7 @@ cd ~/zotonic/user/modules/
 git clone https://github.com/onnet/mod_bt.git
 zotonic shell
 > z:m().
-> z_module_manager:activate(mod_modulename, z:c(yoursitename)).
+> z_module_manager:activate(mod_bt, z:c(phiz)).
 ```
 ### Upload initial keys to Zotonic DB (could be also configured through Zotonic admin portal)
 
