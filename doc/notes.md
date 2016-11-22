@@ -1,0 +1,18 @@
+## Install mod_bt
+```
+su zotonic
+cd ~/zotonic/user/modules/
+git clone https://github.com/onnet/mod_bt.git
+zotonic shell
+> z:m().
+> z_module_manager:activate(mod_modulename, z:c(yoursitename)).
+```
+### Upload initial keys to Zotonic DB (could be also configured through Zotonic admin portal)
+
+vi mod_kazoo_initial_keys.csv
+```
+mod_bt  bt_public_key 3rkgzgrs9tkgsg
+mod_bt  bt_private_key  324ggsrsgdrgs42d9tkgsg
+mod_bt  bt_merchant_id  sg4f4wc3t
+mod_bt  bt_environment  Sandbox
+```
