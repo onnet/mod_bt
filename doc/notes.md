@@ -9,7 +9,7 @@ zotonic shell
 ```
 ### Upload initial keys to Zotonic DB (could be also configured through Zotonic admin portal)
 
-vi mod_kazoo_initial_keys.csv
+vi mod_bt_initial_keys.csv
 ```
 mod_bt  bt_public_key 3rkgzgrs9tkgsg
 mod_bt  bt_private_key  324ggsrsgdrgs42d9tkgsg
