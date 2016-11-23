@@ -17,3 +17,6 @@ mod_bt  bt_merchant_id  sg4f4wc3t
 mod_bt  bt_environment  Sandbox
 ```
 zotonic=> \copy config (module,key,value) from '~/mod_bt_initial_keys.csv';
+
+### Credit Cards for tests
+https://developers.braintreepayments.com/guides/credit-cards/testing-go-live/python
