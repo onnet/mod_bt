@@ -4,7 +4,7 @@
         <tr style="background-color:#F8F8F8">
             <th>
                 <a class="visible-lg" style="color: #FF9002; text-decoration: none; cursor: pointer;" 
-                  {% if m.config.mod_bt.bt_environment.value == "Sandbox" %}
+                  {% if (m.config.mod_bt.bt_environment.value == "Sandbox") or (m.config.mod_bt.bt_environment.value == "sandbox") %}
                    href="https://developers.braintreepayments.com/guides/credit-cards/testing-go-live/python"
                   {% else %}
                    href="https://www.braintreepayments.com/about"

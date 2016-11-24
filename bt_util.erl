@@ -36,5 +36,4 @@ bt_make_default_card(CardId, Context) ->
                                                             ,m_config:get_value('mod_bt', 'bt_private_key', Context)
                                                             ,CardId
                                                            ]),
-    lager:info("OsCmd: ~p", [lists:flatten(OsCmd)]),
     os:cmd(OsCmd).
