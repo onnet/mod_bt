@@ -4,7 +4,12 @@
         <tr style="background-color:#F8F8F8">
             <th>
                 <a class="visible-lg" style="color: #FF9002; text-decoration: none; cursor: pointer;" 
-                   href="https://www.braintreepayments.com/about" target="_blank">{_ Braintree - Electronic Payment System _}</a>
+                  {% if m.config.mod_bt.bt_environment.value == "Sandbox" %}
+                   href="https://developers.braintreepayments.com/guides/credit-cards/testing-go-live/python"
+                  {% else %}
+                   href="https://www.braintreepayments.com/about"
+                  {% endif %}
+                   target="_blank">{_ Braintree - Electronic Payment System _}</a>
                 <span class="hidden-lg" style="color: #FF9002">{_ Braintree _}</span>
             </th>
             <th colspan="2">
