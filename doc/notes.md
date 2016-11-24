@@ -20,3 +20,6 @@ zotonic=> \copy config (module,key,value) from '~/mod_bt_initial_keys.csv';
 
 ### Credit Cards for tests
 https://developers.braintreepayments.com/guides/credit-cards/testing-go-live/python
+
+### Braintree IDs and Keys
+Menu: Account -> My User -> API Keys -> View Authorizations
