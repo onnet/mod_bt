@@ -27,7 +27,7 @@
   </thead>
   <tbody>
     <tr id="make_payment_line_id">
-      <td width="55%">
+      <td width="50%">
         {_ Enter an amount to pay _}
         ({{ m.config.mod_kazoo.local_currency_sign.value }}10 - {{ m.config.mod_kazoo.local_currency_sign.value }}200)
       </td>
