@@ -40,7 +40,8 @@
                                    <br /><br />Your default card will be immediately charged!
                                    <br /><br /> Please refer to our <a href='https://onnet.info/termscons'>Terms & Conditions</a>
                                    regarding cancellation and refund policy.<br /><br />"
-                action={postback postback="kazoo_transaction" delegate="mod_kazoo" qarg="kazoo_transaction"}
+                            action={mask target="make_payment_line_id"}
+                            action={postback postback="kazoo_transaction" delegate="mod_kazoo" qarg="kazoo_transaction"}
             }
          %}
       </td>
