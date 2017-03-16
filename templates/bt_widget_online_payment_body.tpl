@@ -26,26 +26,28 @@
     </tr>
   </thead>
   <tbody>
-    <tr id="make_payment_line_id">
-      <td width="50%">
-        {_ Enter an amount to pay _}
-        ({{ m.session.currency_sign }}10 - {{ m.session.currency_sign }}200)
-      </td>
-      <td>{{ m.session.currency_sign }}
-          <input class="input input-small-onnet" type="text" id="kazoo_transaction" name="kazoo_transaction" value="" />
-      </td>
-      <td>
-        {% button class="btn btn-xs btn-onnet pull-right" text=_"proceed" 
-            action={confirm text=_"<br />Do you really want to proceed with payment?
-                                   <br /><br />Your default card will be immediately charged!
-                                   <br /><br /> Please refer to our <a href='https://onnet.info/termscons'>Terms & Conditions</a>
-                                   regarding cancellation and refund policy.<br /><br />"
-                            action={mask target="make_payment_line_id"}
-                            action={postback postback="kazoo_transaction" delegate="mod_kazoo" qarg="kazoo_transaction"}
-            }
-         %}
-      </td>
-    </tr>
+    {% if m.kazoo.kz_bt_customer[1]["credit_cards"] %}
+      <tr id="make_payment_line_id">
+        <td width="50%">
+          {_ Enter an amount to pay _}
+          ({{ m.session.currency_sign }}10 - {{ m.session.currency_sign }}200)
+        </td>
+        <td>{{ m.session.currency_sign }}
+            <input class="input input-small-onnet" type="text" id="kazoo_transaction" name="kazoo_transaction" value="" />
+        </td>
+        <td>
+          {% button class="btn btn-xs btn-onnet pull-right" text=_"proceed" 
+              action={confirm text=_"<br />Do you really want to proceed with payment?
+                                     <br /><br />Your default card will be immediately charged!
+                                     <br /><br /> Please refer to our <a href='https://onnet.info/termscons'>Terms & Conditions</a>
+                                     regarding cancellation and refund policy.<br /><br />"
+                              action={mask target="make_payment_line_id"}
+                              action={postback postback="kazoo_transaction" delegate="mod_kazoo" qarg="kazoo_transaction"}
+              }
+           %}
+        </td>
+      </tr>
+    {% endif %}
   </tbody>
 </table>
 
