@@ -9,8 +9,13 @@
   </thead>
   <tbody>
     {% for transaction in m.kazoo.kz_bt_transactions %}
-      <tr id={{ transaction["id"] }} {% if transaction["subscription_id"] %}style="cursor: pointer;"{% endif %}>
-        <td class="td-center">{{ transaction["created_at"]|inno_iso_to_date|date:"Y-m-d H:i T":m.kazoo.get_user_timezone }}</td>
+      <tr id={{ transaction["id"] }}
+          {% if transaction["subscription_id"] %}
+            style="cursor: pointer;"
+          {% endif %}>
+        <td class="td-center">
+          {{ transaction["created_at"]|inno_iso_to_date|date:"Y-m-d H:i T":m.kazoo.get_user_timezone }}
+        </td>
         <td class="td-center">{% include "_currency_code_to_sign.tpl" code=transaction %}</td>
         <td class="td-center">{{ transaction["status"] }}</td>
         <td class="td-center">
