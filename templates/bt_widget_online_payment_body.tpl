@@ -3,7 +3,7 @@
     <tr style="height: 10px; color: white!important; background-color: white!important;"><td colspan="3"></td></tr>
     <tr style="background-color:#F8F8F8">
       <th>
-        <a class="visible-lg" style="color: #FF9002; text-decoration: none; cursor: pointer;" 
+        <a class="visible-lg zalarm" style="text-decoration: none; cursor: pointer;" 
           {% if (m.config.mod_bt.bt_environment.value == "Sandbox") or (m.config.mod_bt.bt_environment.value == "sandbox") %}
            href="https://developers.braintreepayments.com/guides/credit-cards/testing-go-live/python"
            target="_blank">{_ Braintree Sandbox _} <small>({_ click for cards numbers _})</small>
