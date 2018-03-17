@@ -20,9 +20,9 @@
             {% if topup %}
             <th>
                   <span class="pull-right" style="padding-right: 1em;">
-                  <span class="onnet-07em">{{ m.config.mod_kazoo.local_currency_sign.value }}</span>{{ topup[1]["threshold"] }}
+                  <span class="onnet-07em">{{ m.mod_kazoo.local_currency_sign }}</span>{{ topup[1]["threshold"] }}
                       / 
-                    <span class="onnet-07em">{{ m.config.mod_kazoo.local_currency_sign.value }}</span>{{ topup[1]["amount"] }}
+                    <span class="onnet-07em">{{ m.session.currency_sign }}</span>{{ topup[1]["amount"] }}
                 </span>
             </th>
             {% else %}
@@ -40,9 +40,9 @@
     <tbody id="top_up_settings" style="display: none;">
         <tr>
             <td class="td-center" colspan="5">
-               When balance falls below {{ m.config.mod_kazoo.local_currency_sign.value }}
+               When balance falls below {{ m.session.currency_sign }}
                <input class="input-card-field" type="text" id="threshold" name="threshold" maxlength="3" size="3" value="{{ topup[1]["threshold"] }}" />
-               add {{ m.config.mod_kazoo.local_currency_sign.value }}
+               add {{ m.session.currency_sign }}
                <input class="input-card-field" type="text" id="amount" name="amount" maxlength="3" size="3" value="{{ topup[1]["amount"] }}" />
                 {% button id="topup_disable_btn" class="btn btn-xs btn-onnet pull-right" text=_"disable"
                     action={postback postback="topup_disable_btn" delegate="mod_kazoo"}

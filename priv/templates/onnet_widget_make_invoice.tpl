@@ -37,7 +37,7 @@
     <tbody id="body_mask">
         <tr>
             <td width="55%">{_ Enter desired amount _}</td>
-            <td>{{ m.config.mod_kazoo.local_currency_sign.value }} <input class="input input-small-onnet" type="text" id="invoiceme" name="invoice_amount" value="" />
+            <td>{{ m.session.currency_sign }} <input class="input input-small-onnet" type="text" id="invoiceme" name="invoice_amount" value="" />
             </td>
             <td>{% button id="email_invoice" class="btn btn-xs btn-onnet pull-right" text=_"proceed"
                           action={mask target="body_mask" message=_"Issuing an invoice..."} 

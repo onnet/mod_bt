@@ -25,7 +25,7 @@
     <tr class="trans-list">
       <td class="trans-h">Next Billing Period Amount</td>
       <td class="trans-t">
-        {{ m.config.mod_kazoo.local_currency_sign.value }}{{ subscription[1]["next_bill_amount"] }}
+        {{ m.session.currency_sign }}{{ subscription[1]["next_bill_amount"] }}
       </td>
     </tr>
    </body>
