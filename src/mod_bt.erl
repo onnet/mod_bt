@@ -8,7 +8,7 @@
 -export([observe_online_payment_systems/2
         ]).
 
--include_lib("zotonic.hrl").
+-include_lib("zotonic_core/include/zotonic.hrl").
 
 observe_online_payment_systems(_, Context) ->
     case modkazoo_auth:is_auth(Context) of
