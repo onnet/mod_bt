@@ -20,7 +20,7 @@
             {% if topup %}
             <th>
                   <span class="pull-right" style="padding-right: 1em;">
-                  <span class="onnet-07em">{{ m.mod_kazoo.local_currency_sign }}</span>{{ topup[1]["threshold"] }}
+                  <span class="onnet-07em">{{ m.session.currency_sign }}</span>{{ topup[1]["threshold"] }}
                       / 
                     <span class="onnet-07em">{{ m.session.currency_sign }}</span>{{ topup[1]["amount"] }}
                 </span>
