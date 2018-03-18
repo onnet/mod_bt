@@ -4,7 +4,7 @@
     <tr style="background-color:#F8F8F8">
       <th>
         <a class="visible-lg zalarm" style="text-decoration: none; cursor: pointer;" 
-          {% if (m.vars.mod_bt.bt_environment.value == "Sandbox") or (m.vars.mod_bt.bt_environment.value == "sandbox") %}
+          {% if (m.vars.mod_bt.bt_environment == "Sandbox") or (m.vars.mod_bt.bt_environment == "sandbox") %}
            href="https://developers.braintreepayments.com/guides/credit-cards/testing-go-live/python"
            target="_blank">{_ Braintree Sandbox _} <small>({_ click for cards numbers _})</small>
           {% else %}
